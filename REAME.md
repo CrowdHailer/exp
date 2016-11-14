@@ -19,3 +19,32 @@ Documentation for the GitHub API can be found at http://developer.github.com
   - Could be most lines of code in total, though some languages naturally require more lines than others.
 2. Accessing the API, both calls to find a users repos and information about those repos can be done without an API key, for that reason I would probably use front end JS only as my first choice to build a web application.
 3. To show Ruby knowledge best to create a small server rendered application.
+
+### Installation
+
+```sh
+vagrant up
+vagrant ssh
+
+# In vm
+
+cd /vagrant
+bundle
+```
+
+### Testing
+
+```sh
+rake test
+```
+
+### Running
+
+- Sinatra needs to be bound to '0.0.0.0' to be available outside the local machine, default behaviour is to be bound to localhost only.
+- The vagrant file sets up forwarding to port 8080
+
+```sh
+rackup -p 8080 -o 0.0.0.0
+```
+
+visit [localhost:8080](localhost:8080)

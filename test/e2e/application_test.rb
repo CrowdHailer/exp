@@ -1,12 +1,5 @@
 require_relative '../test_config'
-
-module GithubFavourites
-  class Web < Sinatra::Base
-    get "/" do
-      "Hello"
-    end
-  end
-end
+require_relative '../../lib/web.rb'
 
 module E2E
   class ApplicationTest < Minitest::Test
