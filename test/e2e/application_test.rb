@@ -1,6 +1,8 @@
 require_relative '../test_config'
 require_relative '../../lib/web.rb'
 
+# Note these tests use the real github API.
+# As there are no credentials required and these are meant to be end-to-end tests I am not currently concerned.
 module E2E
   class ApplicationTest < Minitest::Test
     include Rack::Test::Methods
