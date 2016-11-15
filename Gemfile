@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem "sinatra"
+gem "octokit", "~> 4.0"
 
 group :test do
   gem 'rack-test', :require => 'rack/test'
