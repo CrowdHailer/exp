@@ -21,6 +21,7 @@ module GithubFavourites
       end
       occurances =  languages.each_with_object(Hash.new(0)) { |language,counts| counts[language] += 1 }
       @occurances = occurances.sort_by { |k, v| v}.reverse
+      @username = username
       erb :results
     end
   end

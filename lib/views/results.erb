@@ -5,7 +5,7 @@
     <title>Github Favourite Language</title>
   </head>
   <body>
-    <h1>Favourite language</h1>
+    <h1>Favourite languages for <%= @username %></h1>
     <ol>
       <% @occurances.each do |language, count| %>
       <li><%= count %>: <%= language %></li>

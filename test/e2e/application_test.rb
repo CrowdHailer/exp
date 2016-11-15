@@ -16,9 +16,10 @@ module E2E
       assert_equal response.status, 200
     end
 
-    def test_that_the_a_favourite_language_is_shown
+    def test_that_the_a_users_favourite_language_is_shown
       response = get '/favourite', username: "crowdhailer"
       assert_equal response.status, 200
+      assert_includes response.body, "crowdhailer"
       assert_includes response.body, "Elixir"
     end
   end
