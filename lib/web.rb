@@ -3,7 +3,7 @@ require "sinatra"
 module GithubFavourites
   class Web < Sinatra::Base
     get "/" do
-      "Hello"
+      erb :index
     end
   end
 end
